@@ -1,16 +1,46 @@
 solutions = [];
 
+const toasty = function() {
+  var x = document.getElementById('toastygif');
+
+  if (x.style.display === '') {
+    x.style.display = 'none';
+  }
+
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
+  } else {
+    x.style.display = 'none';
+  }
+};
+
 main();
+
+function timer(toasty) {
+  setTimeout(() => {
+    toasty();
+  }, 2000);
+
+  setTimeout(() => {
+    toasty();
+  }, 5000);
+}
 
 function main() {
   runSolutions();
   createContent(solutions);
   printSolutions(solutions);
+  timer(toasty);
 }
 
 function runSolutions() {
   solutions.push(one());
   solutions.push(two());
+  solutions.push(three());
+}
+
+function three() {
+  
 }
 
 function two() {
